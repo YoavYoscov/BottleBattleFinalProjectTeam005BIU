@@ -1,0 +1,27 @@
+{
+  "name": "finalprojectteam005",
+  "version": "1.0.0",
+  "description": "Initial Readme file, used to create main branch on GitHub.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=local nodemon app.js",
+    "test": "cross-env NODE_ENV=test nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "crypto": "^1.0.1",
+    "custom-env": "^2.0.2",
+    "express": "^4.19.2",
+    "google-auth-library": "^9.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment-timezone": "^0.5.45",
+    "mongoose": "^8.3.2",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.4"
+  }
+}
