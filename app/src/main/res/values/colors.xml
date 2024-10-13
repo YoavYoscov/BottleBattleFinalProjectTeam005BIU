@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#F8F5F0</color>
+    <color name="menu_item_bg_recycle">#C3EAB5</color>
+    <color name="recycling_bag">#43A047</color>
+    <color name="menu_item_recycle_text">#6A9F6C</color>
+    <color name="menu_item_bg_ranks">#FFF5D1</color>
+    <color name="medal">#FDD835</color>
+    <color name="menu_item_ranks_text">#F3D968</color>
+    <color name="menu_item_bg_progress">#D1EDFF</color>
+    <color name="progress_vec_color">#4777A1</color>
+    <color name="menu_item_progress_text">#688CAC</color>
+    <color name="menu_item_bg_settings">#CCCCCC</color>
+    <color name="menu_item_settings_text">#818181</color>
+    <color name="menu_item_privacy_policy_text">#467348</color>
+    <color name="menu_item_privacy_policy">#6bb5a4</color>
+    <color name="settings_wheel">#656565</color>
+    <color name="menu_item_bg_add_friends">#E2C0EC</color>
+    <color name="add_friends_logo">#804591</color>
+    <color name="menu_item_add_friends_text">#91619F</color>
+    <color name="menu_item_bg_stats">#F1A0BE</color>
+    <color name="stats_logo">#F56097</color>
+    <color name="menu_item_stats_text">#D8608C</color>
+    <color name="enabled_submit_btn_fill">#28B347</color>
+    <color name="enabled_submit_btn_outline">#429546</color>
+    <color name="disabled_submit_btn_fill">#6FAC7C</color>
+    <color name="disabled_submit_btn_outline">#467348</color>
+    <color name="loading_bg">#95F8F5F0</color>
+    <color name="loading_circle">#989898</color>
+    <color name="recycle_bin_orange">#F4511E</color>
+    <color name="recycle_bin_blue">#3949AB</color>
+    <color name="recycle_bin_green">#43A047</color>
+    <color name="recycle_bin_purple">#8E24AA</color>
+    <color name="recycle_bin_refundable">#FFD514</color>
+    <color name="recycle_bin_cardboard">#914F30</color>
+    <color name="podium_color">#A0CF8F</color>
+    <color name="success_feedback">#28B347</color>
+    <color name="error_feedback">#E53935</color>
+
+
+</resources>

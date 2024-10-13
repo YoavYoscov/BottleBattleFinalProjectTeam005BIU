@@ -1,0 +1,16 @@
+<vector android:alpha="0.5" android:height="220dp"
+    android:viewportHeight="512" android:viewportWidth="512"
+    android:width="270dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/podium_color"
+        android:pathData="M32,160V456a8,8 0,0 0,8 8H176V160a16,16 0,0 0,-16 -16H48A16,16 0,0 0,32 160Z"
+        android:strokeColor="@color/podium_color" android:strokeLineCap="round"
+        android:strokeLineJoin="round" android:strokeWidth="42"/>
+    <path android:fillColor="@color/podium_color"
+        android:pathData="M320,48H192a16,16 0,0 0,-16 16V464H336V64A16,16 0,0 0,320 48Z"
+        android:strokeColor="@color/podium_color" android:strokeLineCap="round"
+        android:strokeLineJoin="round" android:strokeWidth="42"/>
+    <path android:fillColor="@color/podium_color"
+        android:pathData="M464,208H352a16,16 0,0 0,-16 16V464H472a8,8 0,0 0,8 -8V224A16,16 0,0 0,464 208Z"
+        android:strokeColor="@color/podium_color" android:strokeLineCap="round"
+        android:strokeLineJoin="round" android:strokeWidth="42"/>
+</vector>

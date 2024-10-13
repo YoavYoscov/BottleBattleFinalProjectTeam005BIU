@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.bottlebattle.bottlebattle.Activities.UserRankingsActivity.UserRankingsActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/userRankingsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_border"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/user_rankings"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/userRankingsTV"
+            tools:context="com.bottlebattle.bottlebattle.Activities.UserRankingsActivity.UserRankingsActivity">
+
+
+            <LinearLayout
+                android:id="@+id/tablesHeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userRankingsTV">
+
+                <TextView
+                    android:id="@+id/rankingsHeadlineTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/recyclers_rankings_in_your"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/btnBarForTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/countryBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:text="@string/country"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/cityBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:text="@string/city"
+                        android:textAllCaps="false"
+                        android:textColor="@color/menu_item_settings_text" />
+
+                    <Button
+                        android:id="@+id/friendsBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:text="@string/friends_group"
+                        android:textAllCaps="false"
+                        android:textColor="@color/menu_item_settings_text" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/tableFields"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TableRow
+                    android:background="@color/menu_item_bg_settings"
+                    android:gravity="center"
+                    android:minHeight="40dp">
+
+                    <TextView
+                        android:id="@+id/userColumn"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/user"
+                        android:textColor="#454545"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/pointsColumn"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/points"
+                        android:textColor="#454545"
+                        android:textSize="17sp" />
+                </TableRow>
+            </TableLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tableContentRV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="220dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/refreshBtn"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:src="@mipmap/ic_refresh"
+                    app:layout_constraintEnd_toEndOf="@+id/tableContentRV"
+                    app:layout_constraintTop_toBottomOf="@id/tableContentRV" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/top3podium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/top3TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/top_3"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/podium_3_winners_svg" />
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TableRow android:layout_width="330dp">
+
+                        <TextView
+                            android:id="@+id/secondPlaceField"
+                            android:layout_width="110dp"
+                            android:gravity="center"
+                            android:text="@string/_2nd"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/firstsPlaceField"
+                            android:layout_width="110dp"
+                            android:gravity="center"
+                            android:text="@string/_1st"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ThirdPlaceField"
+                            android:layout_width="110dp"
+                            android:gravity="center"
+                            android:text="@string/_3rd"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow android:layout_width="400dp">
+
+                        <TextView
+                            android:id="@+id/secondPlaceVal"
+                            android:layout_width="100dp"
+                            android:gravity="center"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/firstPlaceVal"
+                            android:layout_width="100dp"
+                            android:gravity="center"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/thirdPlaceVal"
+                            android:layout_width="100dp"
+                            android:gravity="center"
+                            android:textColor="@color/black" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/leaderboardsProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="@color/background"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/loading_circle"
+            android:padding="170dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userRankingsTV" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

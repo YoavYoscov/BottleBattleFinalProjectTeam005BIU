@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/settingsActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.bottlebattle.bottlebattle.Activities.SettingsActivity">
+
+    <TextView
+        android:id="@+id/settingsTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_border"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/settings"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/settingsBtnBar"
+        android:background="@drawable/bottom_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/settingsTV"
+        android:padding="10dp">
+        <Button
+            android:id="@+id/profilePicSettingsBtnBar"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:drawableBottom="@drawable/picture_svg"
+            android:paddingBottom="15dp"
+            android:background="@drawable/round_button_settings_btn_bar_pressed"
+            android:layout_margin="5dp"/>
+        <Button
+            android:id="@+id/citySettingsBtnBar"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:drawableBottom="@drawable/location_pin_svg"
+            android:paddingBottom="5dp"
+            android:background="@drawable/round_button_settings_btn_bar"
+            android:layout_margin="5dp"/>
+        <Button
+            android:id="@+id/deleteSettingsBtnBar"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:drawableBottom="@drawable/delete_user_svg"
+            android:paddingBottom="5dp"
+            android:background="@drawable/round_button_settings_btn_bar"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/changeProfilePicSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/settingsBtnBar">
+            <TextView
+                android:id="@+id/changeProfilePicTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:textSize="22sp"
+                android:text="@string/change_your_profile_picture" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/newProfilePic"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_pfp" />
+
+            <TextView
+                android:id="@+id/newProfilePicFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/error_feedback" />
+
+            <Button
+                android:id="@+id/changeProfilePicBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/round_button_disabled"
+                android:enabled="false"
+                android:text="@string/update"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/changeCitySection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp"
+            app:layout_constraintTop_toBottomOf="@+id/settingsBtnBar"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/changeCityTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:textSize="22sp"
+                android:text="@string/update_your_city" />
+
+            <AutoCompleteTextView
+                android:id="@+id/newCityACTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="@string/city"
+                android:inputType="textPhonetic"/>
+
+            <TextView
+                android:id="@+id/newCityFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/changeCityBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/round_button_disabled"
+                android:text="@string/update"
+                android:textAllCaps="false"
+                android:enabled="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/deleteAccountSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp"
+            app:layout_constraintTop_toBottomOf="@+id/settingsBtnBar"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/deleteAccountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="22sp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/delete_your_account"/>
+            <TextView
+                android:id="@+id/deleteAccountInstructionTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:text="@string/deletion_instruction"
+                />
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/delete_caps"
+                android:padding="5dp"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:background="@drawable/delete_account_btn"/>
+            <TextView
+                android:id="@+id/deleteAccountFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/error_feedback" />
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

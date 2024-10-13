@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.bottlebattle.bottlebattle.Activities.LevelProgressActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:paddingBottom="50dp"
+        tools:context="com.bottlebattle.bottlebattle.Activities.LevelProgressActivity">
+
+        <TextView
+            android:id="@+id/progressTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_border"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/level_progress"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/noviceRecyclerBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/novice_recycler_svg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressTV"/>
+
+        <TextView
+            android:id="@+id/noviceRecyclerTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/message_bubble_svg"
+            android:gravity="center"
+            android:paddingEnd="2dp"
+            android:paddingBottom="10dp"
+            android:text="@string/novice_recycler"
+            android:textSize="12sp"
+            android:translationX="5dp"
+            android:translationY="-15dp"
+            app:layout_constraintEnd_toStartOf="@+id/noviceRecyclerBtn"
+            app:layout_constraintTop_toTopOf="@+id/noviceRecyclerBtn"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/currLevelNoviceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_are_here"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/noviceRecyclerBtn"
+            app:layout_constraintStart_toEndOf="@+id/noviceRecyclerBtn"
+            app:layout_constraintTop_toTopOf="@+id/noviceRecyclerBtn"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/bottle1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:rotation="200"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintEnd_toEndOf="@+id/noviceRecyclerBtn"
+            app:layout_constraintStart_toStartOf="@+id/noviceRecyclerBtn"
+            app:layout_constraintTop_toBottomOf="@id/noviceRecyclerBtn" />
+
+        <ImageView
+            android:id="@+id/bottle2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:rotation="220"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintEnd_toEndOf="@+id/bottle1"
+            app:layout_constraintTop_toBottomOf="@id/bottle1" />
+
+        <ImageView
+            android:id="@+id/bottle3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="25dp"
+            android:rotation="210"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintEnd_toEndOf="@+id/bottle2"
+            app:layout_constraintTop_toBottomOf="@id/bottle2" />
+
+        <ImageView
+            android:id="@+id/bottle4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="5dp"
+            android:rotation="200"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintEnd_toStartOf="@+id/bottle3"
+            app:layout_constraintStart_toStartOf="@+id/bottle3"
+            app:layout_constraintTop_toBottomOf="@+id/bottle3" />
+
+        <Button
+            android:id="@+id/intermediateRecyclerBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/intermediate_recycler_svg"
+            android:translationX="-5dp"
+            app:layout_constraintEnd_toEndOf="@+id/bottle4"
+            app:layout_constraintStart_toStartOf="@+id/bottle4"
+            app:layout_constraintTop_toBottomOf="@+id/bottle4" />
+
+        <FrameLayout
+            android:id="@+id/intermediateRecyclerFL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/intermediateRecyclerBtn"
+            app:layout_constraintTop_toTopOf="@+id/intermediateRecyclerBtn"
+            android:translationX="-10dp"
+            android:translationY="-15dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/message_bubble_svg"
+                android:rotationY="180"/>
+
+            <TextView
+                android:id="@+id/intermediateRecyclerTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:paddingBottom="10dp"
+                android:text="@string/intermediate_recycler"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/currLevelIntermediateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_are_here"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/intermediateRecyclerBtn"
+            app:layout_constraintEnd_toStartOf="@+id/intermediateRecyclerBtn"
+            app:layout_constraintTop_toTopOf="@+id/intermediateRecyclerBtn"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/bottle5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:rotation="160"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintEnd_toEndOf="@+id/intermediateRecyclerBtn"
+            app:layout_constraintStart_toStartOf="@+id/intermediateRecyclerBtn"
+            app:layout_constraintTop_toBottomOf="@id/intermediateRecyclerBtn" />
+
+        <ImageView
+            android:id="@+id/bottle6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:rotation="140"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintStart_toStartOf="@+id/bottle5"
+            app:layout_constraintTop_toBottomOf="@id/bottle5" />
+
+        <ImageView
+            android:id="@+id/bottle7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:rotation="150"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintStart_toStartOf="@+id/bottle6"
+            app:layout_constraintTop_toBottomOf="@+id/bottle6" />
+
+        <ImageView
+            android:id="@+id/bottle8"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:rotation="160"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintStart_toStartOf="@+id/bottle7"
+            app:layout_constraintTop_toBottomOf="@+id/bottle7" />
+
+        <Button
+            android:id="@+id/expertRecyclerBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/expert_recycler_svg"
+            android:translationX="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/bottle8"
+            app:layout_constraintStart_toStartOf="@+id/bottle8"
+            app:layout_constraintTop_toBottomOf="@+id/bottle8" />
+
+        <TextView
+            android:id="@+id/expertRecyclerTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/message_bubble_svg"
+            android:gravity="center"
+            android:paddingEnd="2dp"
+            android:paddingBottom="10dp"
+            android:text="@string/expert_recycler"
+            android:textSize="12sp"
+            android:translationX="15dp"
+            android:translationY="-20dp"
+            app:layout_constraintEnd_toStartOf="@+id/expertRecyclerBtn"
+            app:layout_constraintTop_toTopOf="@+id/expertRecyclerBtn"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/currLevelExpertTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_are_here"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/expertRecyclerBtn"
+            app:layout_constraintStart_toEndOf="@+id/expertRecyclerBtn"
+            app:layout_constraintTop_toTopOf="@+id/expertRecyclerBtn"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/bottle9"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:rotation="200"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintEnd_toEndOf="@+id/expertRecyclerBtn"
+            app:layout_constraintStart_toStartOf="@+id/expertRecyclerBtn"
+            app:layout_constraintTop_toBottomOf="@id/expertRecyclerBtn" />
+
+        <ImageView
+            android:id="@+id/bottle10"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:rotation="220"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintEnd_toEndOf="@+id/bottle9"
+            app:layout_constraintTop_toBottomOf="@id/bottle9" />
+
+        <ImageView
+            android:id="@+id/bottle11"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="25dp"
+            android:rotation="210"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintEnd_toEndOf="@+id/bottle10"
+            app:layout_constraintTop_toBottomOf="@id/bottle10" />
+
+        <ImageView
+            android:id="@+id/bottle12"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="5dp"
+            android:rotation="200"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintEnd_toStartOf="@+id/bottle11"
+            app:layout_constraintStart_toStartOf="@+id/bottle11"
+            app:layout_constraintTop_toBottomOf="@+id/bottle11" />
+
+        <Button
+            android:id="@+id/recyclingWizardBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/recycling_wizard_svg"
+            android:translationX="-5dp"
+            app:layout_constraintEnd_toEndOf="@+id/bottle12"
+            app:layout_constraintStart_toStartOf="@+id/bottle12"
+            app:layout_constraintTop_toBottomOf="@+id/bottle12" />
+
+        <FrameLayout
+            android:id="@+id/recyclingWizardFL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/recyclingWizardBtn"
+            app:layout_constraintTop_toTopOf="@+id/recyclingWizardBtn"
+            android:translationX="-10dp"
+            android:translationY="-15dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/message_bubble_svg"
+                android:rotationY="180"/>
+
+            <TextView
+                android:id="@+id/recyclingWizardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:paddingBottom="10dp"
+                android:text="@string/recycling_wizard"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/currLevelWizardTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_are_here"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclingWizardBtn"
+            app:layout_constraintEnd_toStartOf="@+id/recyclingWizardBtn"
+            app:layout_constraintTop_toTopOf="@+id/recyclingWizardBtn"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/bottle13"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:rotation="160"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintEnd_toEndOf="@+id/recyclingWizardBtn"
+            app:layout_constraintStart_toStartOf="@+id/recyclingWizardBtn"
+            app:layout_constraintTop_toBottomOf="@id/recyclingWizardBtn" />
+
+        <ImageView
+            android:id="@+id/bottle14"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:rotation="140"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintStart_toStartOf="@+id/bottle13"
+            app:layout_constraintTop_toBottomOf="@id/bottle13" />
+
+        <ImageView
+            android:id="@+id/bottle15"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:rotation="150"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintStart_toStartOf="@+id/bottle14"
+            app:layout_constraintTop_toBottomOf="@+id/bottle14" />
+
+        <ImageView
+            android:id="@+id/bottle16"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:rotation="160"
+            android:src="@drawable/bottle_of_water_svg"
+            app:layout_constraintStart_toStartOf="@+id/bottle15"
+            app:layout_constraintTop_toBottomOf="@+id/bottle15" />
+
+        <Button
+            android:id="@+id/recyclingMasterBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/recycling_master_svg"
+            android:translationX="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/bottle16"
+            app:layout_constraintStart_toStartOf="@+id/bottle16"
+            app:layout_constraintTop_toBottomOf="@+id/bottle16" />
+        <TextView
+            android:id="@+id/recyclingMasterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/message_bubble_svg"
+            android:gravity="center"
+            android:paddingEnd="2dp"
+            android:paddingBottom="10dp"
+            android:text="@string/recycling_master"
+            android:textSize="12sp"
+            android:translationX="15dp"
+            android:translationY="-20dp"
+            app:layout_constraintEnd_toStartOf="@+id/recyclingMasterBtn"
+            app:layout_constraintTop_toTopOf="@+id/recyclingMasterBtn"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/currLevelMasterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_are_here"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclingMasterBtn"
+            app:layout_constraintStart_toEndOf="@+id/recyclingMasterBtn"
+            app:layout_constraintTop_toTopOf="@+id/recyclingMasterBtn"
+            android:gravity="center"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

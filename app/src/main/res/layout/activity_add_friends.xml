@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.bottlebattle.bottlebattle.Activities.AddFriendsActivity"
+    android:background="@color/background">
+    <TextView
+        android:id="@+id/addFriendsTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_border"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/add_friends"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/addFriendsTV"
+        android:layout_marginTop="60dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/expandNetworkTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="#393939"
+            android:text="@string/expand_your_network"/>
+        <TextView
+            android:id="@+id/screenDescTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:padding="5dp"
+            android:text="@string/this_is_the_place_to_add_new_recyclers_to_your_friends_list"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/addFriendsACTV"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:autofillHints="City"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/recycler_username"
+            android:inputType="textPhonetic" />
+        <TextView
+            android:id="@+id/addFriendsFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="end"
+            android:textSize="17sp" />
+        <Button
+            android:id="@+id/addFriendsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:textAllCaps="false"
+            android:enabled="false"
+            android:textColor="@color/white"
+            android:background="@drawable/round_button_disabled"/>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/addFriendsProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/loading_circle"
+        android:padding="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addFriendsTV"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

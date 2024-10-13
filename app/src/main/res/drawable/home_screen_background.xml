@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/background"/> <!-- Set your desired background color here -->
+        </shape>
+    </item>
+    <item android:drawable="@drawable/tree1_svg"
+        android:gravity="bottom|right"
+        android:height="220dp"
+        android:width="220dp"
+        android:right="-70dp"
+        />
+    <item android:bottom="0dp" android:drawable="@drawable/tree2_svg"
+        android:gravity="bottom|left"
+        android:height="180dp"
+        android:width="180dp"
+        android:left="-50dp"
+        />
+</layer-list>

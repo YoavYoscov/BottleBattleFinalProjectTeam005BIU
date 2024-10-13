@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.bottlebattle.bottlebattle.Activities.RecycleItemActivities.RecycleItemActivity">
+    <TextView
+        android:id="@+id/recycleItemHeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_border"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/add_a_recycled_item"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/nameBarcodeInput"
+        android:layout_width="match_parent"
+        android:layout_height="254dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/orDivider"
+        app:layout_constraintTop_toBottomOf="@+id/recycleItemHeadline">
+
+        <TextView
+            android:id="@+id/nameBarcodeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/by_product_name_or_barcode"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/nameBarcodeACTV"
+                android:layout_width="280dp"
+                android:layout_height="31dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/et_style"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_product_name_or_picture_its_barcode"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"/>
+
+            <ImageButton
+                android:id="@+id/barcodeCamera"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="22dp"
+                android:src="@mipmap/ic_camera"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nameBarcodeQuantityTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/quantity" />
+
+            <NumberPicker
+                android:id="@+id/nameBarcodeQuantityNP"
+                android:layout_width="wrap_content"
+                android:layout_height="59dp" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/submitNameBarcodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/round_button_disabled"
+            android:enabled="false"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/submitNameFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#E53935" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/orDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/line_with_circle"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/orText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/or"
+            android:textColor="#555555"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/categorySection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orDivider">
+
+        <TextView
+            android:id="@+id/categoryTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/by_category"
+            android:textSize="22sp" />
+
+        <HorizontalScrollView
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="@drawable/category_bar_bg"
+            android:layout_marginBottom="20dp"
+            android:fadeScrollbars="false"
+            android:padding="10dp"
+            android:clipToOutline="true">
+
+            <LinearLayout
+                style="?android:attr/buttonBarStyle"
+                android:id="@+id/categoryButtonBar"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:id="@+id/smallPlasticBottleBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/round_button3_left"
+                    android:drawableTop="@drawable/plastic_bottle_svg"
+                    android:text="@string/plastic_bottle_750ml"
+                    android:textAllCaps="false"
+                    android:textColor="#989898"
+                    android:textSize="12sp" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:id="@+id/mediumPlasticBottleBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/round_button3_middle"
+                    android:drawableTop="@drawable/plastic_bottle_svg"
+                    android:text="@string/plastic_bottle_1_5l"
+                    android:textAllCaps="false"
+                    android:textColor="#989898"
+                    android:textSize="12sp" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:id="@+id/largePlasticBottleBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/round_button3_middle"
+                    android:drawableTop="@drawable/plastic_bottle_svg"
+                    android:text="@string/plastic_bottle_2_0l"
+                    android:textAllCaps="false"
+                    android:textColor="#989898"
+                    android:textSize="12sp" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:id="@+id/glassBottleBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/round_button3_middle"
+                    android:drawableTop="@drawable/glass_bottle_svg"
+                    android:text="@string/glass_bottle"
+                    android:textAllCaps="false"
+                    android:textColor="#989898"
+                    android:textSize="12sp" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:id="@+id/cartonBoxBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/round_button3_middle"
+                    android:drawableTop="@drawable/carton_svg"
+                    android:text="@string/carton_box"
+                    android:textAllCaps="false"
+                    android:textColor="#989898"
+                    android:textSize="12sp" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:id="@+id/papersBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/round_button3_right"
+                    android:drawableTop="@drawable/papers_svg"
+                    android:text="@string/papers"
+                    android:textAllCaps="false"
+                    android:textColor="#989898"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/categoryQuantityTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/quantity" />
+
+            <NumberPicker
+                android:id="@+id/categoryQuantityNP"
+                android:layout_width="wrap_content"
+                android:layout_height="59dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitCategoryBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/round_button_disabled"
+            android:enabled="false"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/submitCategoryFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#E53935" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/loading_circle"
+        android:padding="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycleItemHeadline" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background shape -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/menu_item_bg_ranks"/>
+        </shape>
+    </item>
+    <!-- SVG image as a bitmap -->
+    <item android:bottom="35dp" android:drawable="@drawable/medal_svg"
+        android:gravity="bottom|center_horizontal"
+        android:height="130dp"
+        android:width="130dp"
+        />
+</layer-list>
